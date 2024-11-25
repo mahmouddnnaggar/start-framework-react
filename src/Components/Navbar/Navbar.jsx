@@ -22,8 +22,23 @@ export default function Navbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('click', () => {
+      setIsNavOpen(false);
+    });
+    return () => {
+      window.removeEventListener('click', () => {
+        setIsNavOpen(false);
+      });
+    };
+  }, []);
+
   return (
     <nav
+      onClick={e => {
+        e.stopPropagation();
+      }}
       style={{ height: navbarHeight }}
       className={`z-50 fixed top-0 left-0 right-0 py-1 uppercase text-white bg-slate-700 flex items-center transition-[height] duration-500`}
     >
@@ -34,6 +49,9 @@ export default function Navbar() {
           </Link>
         </h1>
         <ul
+          onClick={e => {
+            e.stopPropagation();
+          }}
           className={`flex ps-6 pt-12 pb-5  gap-8 font-bold md:flex-row flex-col md:static absolute -top-[800px] left-0 right-0 md:p-0 bg-slate-700 duration-700 ms-auto -z-40 transition-[top] ${
             isNavOpen && style.open
           }`}

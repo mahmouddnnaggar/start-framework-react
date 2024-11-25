@@ -2,7 +2,7 @@ import Header from '@/Utilities/Header/Header';
 
 export default function Contact() {
   return (
-    <div className="contact-section bg-white mt-4">
+    <div className="contact-section bg-white md:mt-4 mt-12">
       <div className="container min-h-screen flex items-center justify-center flex-col gap-4">
         <Header text="Contact Component" />
         <form className="min-w-[0px] max-w-[750px] space-y-10">
