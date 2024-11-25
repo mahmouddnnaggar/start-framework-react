@@ -1,4 +1,4 @@
-import Header from '../../Utilities/Header/Header';
+import Header from '@/Utilities/Header/Header';
 
 export default function About() {
   return (

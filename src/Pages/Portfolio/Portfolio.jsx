@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
-import Card from '../../Utilities/Card/Card';
-import Header from '../../Utilities/Header/Header';
-import Modal from '../../Components/Modal/Modal';
+import Card from '@/Utilities/Card/Card';
+import Header from '@/Utilities/Header/Header';
+import Modal from '@/Components/Modal/Modal';
 // ^ new code
-import img1 from '../../assets/imgs/port1.png';
-import img2 from '../../assets/imgs/port2.png';
-import img3 from '../../assets/imgs/port3.png';
+import img1 from '@/assets/imgs/port1.png';
+import img2 from '@/assets/imgs/port2.png';
+import img3 from '@/assets/imgs/port3.png';
 const images = [img1, img2, img3, img1, img2, img3];
 
 export default function Portfolio() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [imgSrc, setImgSrc] = useState('../../../public/imgs/port1.png');
+  const [imgSrc, setImgSrc] = useState('@/assets/imgs/port1.png');
   useEffect(() => {
     window.addEventListener('click', () => {
       setIsModalOpen(false);
