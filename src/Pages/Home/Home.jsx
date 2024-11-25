@@ -1,4 +1,4 @@
-import avatar from '../../../public/imgs/avataaars.svg';
+import avatar from '../../assets/imgs/avataaars.svg';
 import Header from '../../Utilities/Header/Header';
 
 export default function Home() {
